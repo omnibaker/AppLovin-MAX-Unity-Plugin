@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using com.adjust.sdk;
+using System.Collections;
 
 public class HomeScreen : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class HomeScreen : MonoBehaviour
     public Text interstitialStatusText;
     public Text rewardedStatusText;
     public Text rewardedInterstitialStatusText;
+    public Text notReady;
 
     private bool isBannerShowing;
     private bool isMRecShowing;
@@ -28,11 +30,41 @@ public class HomeScreen : MonoBehaviour
     private int interstitialRetryAttempt;
     private int rewardedRetryAttempt;
     private int rewardedInterstitialRetryAttempt;
+    private Coroutine _tempNotReady;
+
+    private void ShoutIfTouched()
+    {
+        Debug.Log("Button pressed!");
+        TriggerTempNotReady();
+    }
+    private void TriggerTempNotReady()
+    {
+        if(_tempNotReady != null)
+        {
+            StopCoroutine(_tempNotReady);
+        }
+        _tempNotReady = StartCoroutine(TempNotReady());
+    }
+    private IEnumerator TempNotReady()
+    {
+        notReady.text = "Not Ready...";
+        float time = 1f;
+        float t = 0;
+
+        while(t < 1f)
+        {
+            notReady.color = new Color(1f, 1f, 1f, 1f-t);
+            t += Time.deltaTime / time;
+            yield return null;
+        }
+    }
 
     void Start()
     {
         showInterstitialButton.onClick.AddListener(ShowInterstitial);
+        showInterstitialButton.onClick.AddListener(ShoutIfTouched);
         showRewardedButton.onClick.AddListener(ShowRewardedAd);
+        showRewardedButton.onClick.AddListener(ShoutIfTouched);
         showRewardedInterstitialButton.onClick.AddListener(ShowRewardedInterstitialAd);
         showBannerButton.onClick.AddListener(ToggleBannerVisibility);
         showMRecButton.onClick.AddListener(ToggleMRecVisibility);
