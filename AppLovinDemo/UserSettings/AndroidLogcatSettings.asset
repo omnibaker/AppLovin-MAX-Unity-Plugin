@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R58TB0PQSXJ",
         "name": "com.tempoplatform.sjb.applovin.text01",
-        "processId": 21808,
+        "processId": 24376,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,6 +12,12 @@
             "deviceId": "R58TB0PQSXJ",
             "name": "com.tempoplatform.sjb.applovin.text01",
             "processId": 21808,
+            "exited": false
+        },
+        {
+            "deviceId": "R58TB0PQSXJ",
+            "name": "com.tempoplatform.sjb.applovin.text01",
+            "processId": 24376,
             "exited": false
         }
     ],
