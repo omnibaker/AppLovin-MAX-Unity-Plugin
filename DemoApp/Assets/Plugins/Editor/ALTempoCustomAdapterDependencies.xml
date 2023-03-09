@@ -1,0 +1,17 @@
+
+<dependencies>
+   <androidPackages>
+    <androidPackage spec="com.github.Tempo-Platform:tempo-android-applovin-mediation:0.4.0">
+      <repositories>
+        <repository>https://jitpack.io</repository>
+      </repositories>
+    </androidPackage>
+  </androidPackages>
+  <iosPods>
+    <iosPod name="tempo-applovin-mediation" version="~> 0.2.11">
+      <sources>
+        <source>https://github.com/CocoaPods/Specs</source>
+      </sources>
+    </iosPod>
+  </iosPods>
+</dependencies> 

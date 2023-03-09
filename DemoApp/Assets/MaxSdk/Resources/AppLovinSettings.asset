@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: AppLovinSettings
   m_EditorClassIdentifier: 
   qualityServiceEnabled: 1
-  sdkKey: 
+  sdkKey: STW6syrzCrwOGB4off31qds0RCKsgenyFb1loviK8d3Xe7mhbJznCwLJD4UzUmPTUGX7VvenBr6hXBdyJL7Sgu
+  setAttributionReportEndpoint: 0
   consentFlowEnabled: 0
   consentFlowPrivacyPolicyUrl: 
   consentFlowTermsOfServiceUrl: 
@@ -28,3 +29,4 @@ MonoBehaviour:
   userTrackingUsageDescriptionZhHant: 
   adMobAndroidAppId: 
   adMobIosAppId: 
+  snapAppStoreAppId: 0

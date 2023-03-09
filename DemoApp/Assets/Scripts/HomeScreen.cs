@@ -5,9 +5,9 @@ using com.adjust.sdk;
 
 public class HomeScreen : MonoBehaviour
 {
-    private const string MaxSdkKey = "ENTER_MAX_SDK_KEY_HERE";
-    private const string InterstitialAdUnitId = "ENTER_INTERSTITIAL_AD_UNIT_ID_HERE";
-    private const string RewardedAdUnitId = "ENTER_REWARD_AD_UNIT_ID_HERE";
+    private const string MaxSdkKey = "STW6syrzCrwOGB4off31qds0RCKsgenyFb1loviK8d3Xe7mhbJznCwLJD4UzUmPTUGX7VvenBr6hXBdyJL7Sgu";
+    private const string InterstitialAdUnitId = "f021ef0320366b63"; //861a8079fcbc7bf2
+    private const string RewardedAdUnitId = "695ff06883f41dab"; //c5ea1b47de3901ba
     private const string RewardedInterstitialAdUnitId = "ENTER_REWARD_INTER_AD_UNIT_ID_HERE";
     private const string BannerAdUnitId = "ENTER_BANNER_AD_UNIT_ID_HERE";
     private const string MRecAdUnitId = "ENTER_MREC_AD_UNIT_ID_HERE";
