@@ -6,9 +6,15 @@ using System.Collections;
 
 public class HomeScreen : MonoBehaviour
 {
+
+    [SerializeField] private string ios_interstitial = "861a8079fcbc7bf2"; // 861a8079fcbc7bf2
+    [SerializeField] private string ios_rewarded = "c5ea1b47de3901ba"; // c5ea1b47de3901ba
+    [SerializeField] private string android_interstitial = "f021ef0320366b63"; // f021ef0320366b63
+    [SerializeField] private string android_rewarded = "695ff06883f41dab"; // 695ff06883f41dab
+    private string InterstitialAdUnitId = "tba";
+    private string RewardedAdUnitId = "tba";
+
     private const string MaxSdkKey = "STW6syrzCrwOGB4off31qds0RCKsgenyFb1loviK8d3Xe7mhbJznCwLJD4UzUmPTUGX7VvenBr6hXBdyJL7Sgu";
-    private const string InterstitialAdUnitId = "f021ef0320366b63"; //861a8079fcbc7bf2
-    private const string RewardedAdUnitId = "695ff06883f41dab"; //c5ea1b47de3901ba
     private const string RewardedInterstitialAdUnitId = "ENTER_REWARD_INTER_AD_UNIT_ID_HERE";
     private const string BannerAdUnitId = "ENTER_BANNER_AD_UNIT_ID_HERE";
     private const string MRecAdUnitId = "ENTER_MREC_AD_UNIT_ID_HERE";
@@ -57,9 +63,21 @@ public class HomeScreen : MonoBehaviour
             t += Time.deltaTime / time;
             yield return null;
         }
+        notReady.color = new Color(1f, 1f, 1f, 0);
     }
 
-    void Start()
+    private void Awake()
+    {
+#if UNITY_IOS
+        InterstitialAdUnitId = ios_interstitial
+        RewardedAdUnitId = ios_rewarded
+#elif UNITY_ANDROID
+        InterstitialAdUnitId = android_interstitial;
+        RewardedAdUnitId = android_rewarded;
+#endif
+    }
+
+    private void Start()
     {
         showInterstitialButton.onClick.AddListener(ShowInterstitial);
         showInterstitialButton.onClick.AddListener(ShoutIfTouched);

@@ -3,87 +3,57 @@
     "m_SelectedPackage": {
         "deviceId": "R58TB0PQSXJ",
         "name": "com.tempoplatform.sjb.applovin.text01",
-        "processId": 19935,
+        "processId": 26305,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 21808,
+            "name": "com.sec.android.app.launcher",
+            "processId": 1712,
             "exited": false
         },
         {
             "deviceId": "R58TB0PQSXJ",
             "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 24376,
+            "processId": 16215,
+            "exited": true
+        },
+        {
+            "deviceId": "R58TB0PQSXJ",
+            "name": "com.tempoplatform.sjb.applovin.text01",
+            "processId": 18775,
+            "exited": true
+        },
+        {
+            "deviceId": "R58TB0PQSXJ",
+            "name": "com.tempoplatform.sjb.applovin.text01",
+            "processId": 22644,
+            "exited": true
+        },
+        {
+            "deviceId": "R58TB0PQSXJ",
+            "name": "com.tempoplatform.sjb.applovin.text01",
+            "processId": 23223,
+            "exited": true
+        },
+        {
+            "deviceId": "R58TB0PQSXJ",
+            "name": "com.tempoplatform.sjb.applovin.text01",
+            "processId": 24217,
+            "exited": true
+        },
+        {
+            "deviceId": "R58TB0PQSXJ",
+            "name": "com.tempoplatform.sjb.applovin.text01",
+            "processId": 24842,
             "exited": false
         },
         {
             "deviceId": "R58TB0PQSXJ",
             "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 3754,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 5055,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 6719,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 9660,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 11558,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 12896,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 16144,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 17059,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 17814,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 18855,
-            "exited": false
-        },
-        {
-            "deviceId": "R58TB0PQSXJ",
-            "name": "com.tempoplatform.sjb.applovin.text01",
-            "processId": 19935,
+            "processId": 26305,
             "exited": false
         }
     ],
@@ -95,7 +65,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": true
+                "m_Selected": false
             },
             {
                 "m_Name": "",
@@ -116,6 +86,10 @@
             {
                 "m_Name": "CRASH",
                 "m_Selected": false
+            },
+            {
+                "m_Name": "Tempo",
+                "m_Selected": true
             }
         ]
     },
