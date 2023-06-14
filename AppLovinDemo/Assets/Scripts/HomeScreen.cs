@@ -8,7 +8,7 @@ public class HomeScreen : MonoBehaviour
 {
 
     [SerializeField] private string ios_interstitial = "861a8079fcbc7bf2"; // 861a8079fcbc7bf2
-    [SerializeField] private string ios_rewarded = "c5ea1b47de3901ba"; // c5ea1b47de3901ba
+    [SerializeField] private string ios_rewarded = "b87ad839e2fac6d0"; // b87ad839e2fac6d0
     [SerializeField] private string android_interstitial = "f021ef0320366b63"; // f021ef0320366b63
     [SerializeField] private string android_rewarded = "695ff06883f41dab"; // 695ff06883f41dab
     private string InterstitialAdUnitId = "tba";
@@ -69,8 +69,8 @@ public class HomeScreen : MonoBehaviour
     private void Awake()
     {
 #if UNITY_IOS
-        InterstitialAdUnitId = ios_interstitial
-        RewardedAdUnitId = ios_rewarded
+        InterstitialAdUnitId = ios_interstitial;
+        RewardedAdUnitId = ios_rewarded;
 #elif UNITY_ANDROID
         InterstitialAdUnitId = android_interstitial;
         RewardedAdUnitId = android_rewarded;
@@ -118,8 +118,9 @@ public class HomeScreen : MonoBehaviour
         MaxSdkCallbacks.Interstitial.OnAdDisplayFailedEvent += InterstitialFailedToDisplayEvent;
         MaxSdkCallbacks.Interstitial.OnAdHiddenEvent += OnInterstitialDismissedEvent;
         MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent += OnInterstitialRevenuePaidEvent;
-        
+
         // Load the first interstitial
+        Debug.Log("!!!! LOADING INTERSTITIAL");
         LoadInterstitial();
     }
 
@@ -212,6 +213,8 @@ public class HomeScreen : MonoBehaviour
         MaxSdkCallbacks.Rewarded.OnAdRevenuePaidEvent += OnRewardedAdRevenuePaidEvent;
 
         // Load the first RewardedAd
+
+        Debug.Log("!!!! LOADING REWARDED");
         LoadRewardedAd();
     }
 
@@ -239,6 +242,7 @@ public class HomeScreen : MonoBehaviour
         // Rewarded ad is ready to be shown. MaxSdk.IsRewardedAdReady(rewardedAdUnitId) will now return 'true'
         rewardedStatusText.text = "Loaded";
         Debug.Log("Rewarded ad loaded");
+
         
         // Reset retry attempt
         rewardedRetryAttempt = 0;
@@ -246,6 +250,7 @@ public class HomeScreen : MonoBehaviour
 
     private void OnRewardedAdFailedEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo)
     {
+        Debug.Log("Rewarded ad failed");
         // Rewarded ad failed to load. We recommend retrying with exponentially higher delays up to a maximum delay (in this case 64 seconds).
         rewardedRetryAttempt++;
         double retryDelay = Math.Pow(2, Math.Min(6, rewardedRetryAttempt));

@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ios_interstitial: 861a8079fcbc7bf2
-  ios_rewarded: c5ea1b47de3901ba
+  ios_rewarded: b87ad839e2fac6d0
   android_interstitial: f021ef0320366b63
   android_rewarded: 695ff06883f41dab
   showInterstitialButton: {fileID: 1034179793}
